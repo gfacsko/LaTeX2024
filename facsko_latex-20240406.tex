@@ -1,0 +1,301 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{cite}
+\usepackage{esint}
+%\usepackage{natbib}
+\usepackage{hologo}
+\usepackage{inlinebib}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\title{\hfill \includegraphics{MFE.png}\\Bevezetés a \LaTeX\ használatába}
+
+% \subtitle{5-8. előadás}
+
+\author{Dr.~Facskó Gábor, PhD\\\tiny főiskolai adjunktus, tudományos főmunkatárs\\\textit{facsko.gabor@uni-milton.hu}}
+
+\institute{\Tiny Milton Friedman Egyetem, Informatikai Tanszék, 1039 Budapest, Kelta utca 2.\\Wigner Fizikai Kutatóközpont, Űrfizikai és Űrtechnikai Osztály, 1121 Budapest, Konkoly-Thege Miklós út 29-33.\\ \texttt{https://wigner.hu/$\sim$facsko.gabor}}
+
+\date{2024.~április~6.}
+
+\logo{\includegraphics[height=0.9cm]{kekcsik.png}}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\frame{\titlepage}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[fragile,squeeze,allowframebreaks]
+\frametitle{Matematikai szövegek szerkesztése matematikai módban}
+\begin{itemize}
+\item Szövegközi képletek: \$ \texttt{F\_i} \ \$  \hskip 2 cm $F_i$
+\item Képlet külön sorban: \$\$ \texttt{F\_i} \$\$  \[ F_i \]
+\item Szabványos \LaTeX:\\
+\textbackslash( \texttt{F\_i} \textbackslash) \( F_i \)  \\
+\textbackslash[ \texttt{F\_i} \textbackslash] \hskip 2 cm \[F_i\]
+\item A \textit{math} környezet szövegközi képleteket kezel:
+\tiny
+\begin{verbatim*}
+A cserebogarak tapogatóinak hossza \\ 
+\begin{math} \\
+\frac{\sqrt{a^3}}{5} \\
+\end{math}
+mérhetö.
+\end{verbatim*}
+\normalsize
+A cserebogarak tapogatóinak hossza
+\begin{math}
+\frac{\sqrt{a^3}}{5}
+\end{math}
+mérhető.
+\end{itemize}
+\vfill
+
+\pagebreak % --------------------------------------------------------------------------------------------------------------------
+
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+\item Az \textit{equation} környezet:
+%\small
+\begin{verbatim*}
+\begin{equation} 
+\frac{\sqrt{a^3}{5}}
+\end{equation*}
+\end{verbatim*}
+\begin{equation}
+\frac{\sqrt{a^3}}{5}
+\end{equation}
+
+\pagebreak % --------------------------------------------------------------------------------------------------------------------
+
+\item Az \textit{eqnarray} környezet:
+\begin{verbatim*}
+\begin{eqnarray}
+c & = & \frac\{\sqrt\{a^3}}{b} \\
+F_L & = & q \cdot (\mathbf{v} \times \mathbf{B}) \\
+E &=& m c^2
+\end{eqnarray}
+\end{verbatim*} 
+%\normalsize
+\begin{eqnarray}
+\setcounter{equation}{1}
+c &=& \frac{\sqrt{a^3}}{b} \\
+F_L &=& q \cdot \left(\mathbf{v} \times \mathbf{B}\right)\\
+E &=& m c^2
+\end{eqnarray}
+
+\pagebreak % --------------------------------------------------------------------------------------------------------------------
+
+\item A \textit{eqnarray*} környezet:
+\begin{verbatim*}
+\begin{eqnarray*}
+c &=& \frac{\sqrt{a^3}}{b} \\
+F_L &=& q \cdot\left(\mathbf{v} \times \mathbf{B}\right) \\
+E &=& m c^2 \\
+\end{eqnarray*}
+\end{verbatim*} 
+\begin{eqnarray*}
+\setcounter{equation}{1}
+c &=& \frac{\sqrt{a^3}}{b}\\
+F_L &=& q \cdot \left(\mathbf{v} \times \mathbf{B}\right)\\
+E &=& m c^2
+\end{eqnarray*}
+\end{itemize}
+\vfill
+
+\pagebreak % --------------------------------------------------------------------------------------------------------------------
+
+\begin{itemize}
+\item Négyzetgyökvonás: \textbackslash sqrt\{11\}  $\rightarrow\sqrt{11}$
+\item Gyökvonás: \textbackslash sqrt[3]\{b\^{}4\} $\rightarrow\sqrt[3]{b^4}$
+\item Törtek: \textbackslash frac\{a\}\{b\} $\rightarrow\frac{a}{b}$
+\item Sinus és cosinus: \textbackslash sin és \textbackslash cos
+\item Szimbólumok: 
+\begin{itemize}
+\item +, -, $<$, $>$, =
+\item \textbackslash le, \textbackslash ge, \textbackslash ne $\rightarrow\le, \ge, \ne$
+\item \textbackslash sim $\rightarrow \sim$
+\item A és B halmaz metszete: A\textbackslash cap B $\rightarrow A\cap B$
+\item A és B halmaz uniója: A\textbackslash cup B $\rightarrow A\cup B$
+\item Görög betűk: \textbackslash alpha$\rightarrow\alpha$, \textbackslash beta$\rightarrow\beta$, \textbackslash Gamma$\rightarrow\Gamma$, \textbackslash Delta $\rightarrow\Delta$, \textbackslash Theta, \textbackslash theta, \textbackslash vartheta, $\rightarrow\Theta, \theta, \vartheta$
+\item Differenciál operátorok: \textbackslash nabla $\rightarrow\nabla$
+\end{itemize}
+\end{itemize}
+\texttt{https://oeis.org/wiki/List\_of\_LaTeX\_mathematical\_symbols}
+\vfill
+
+\pagebreak % --------------------------------------------------------------------------------------------------------------------
+
+\begin{itemize}
+\item Parciális differenciálás:\\\textbackslash partial x\_i $\rightarrow\partial x_i$\\\textbackslash left(\textbackslash frac\{\textbackslash partial\}\{\textbackslash partial x\_i\}\textbackslash right) $\rightarrow\left(\frac{\partial}{\partial x_i}\right)$\\ \textbackslash left(\textbackslash frac\{\textbackslash partial\^{}2\}\{\textbackslash partial\^{}2 x\_i\}\textbackslash right)$\rightarrow\left(\frac{\partial^2}{\partial^2 x_i}\right)$\\
+\item Integrálok kiszámítása
+\begin{itemize}
+\item Határozatlan integrál:\\\textbackslash int \textbackslash frac\{1\}\{x\} dx$\rightarrow\int \frac{1}{x} dx$
+\item Határozott integrál:\\\textbackslash int\textbackslash limits\_\{-\textbackslash infty\}\^{}\{\textbackslash infty\} \textbackslash frac\{\textbackslash sin x\}\{x\} dx=1 $\rightarrow\int\limits_{-\infty}^{\infty} \frac{\sin x}{x} dx=1$
+\item Többszörös integrál (\textit{esint} csomagban):\\\textbackslash iiint g(x,y,z) \textbackslash,dx\textbackslash,dy\textbackslash,dz $\rightarrow\iiint g\left(x,y,z\right) \,dx\,dy\,dz$
+\end{itemize}
+\end{itemize}
+\vfill
+
+\pagebreak % --------------------------------------------------------------------------------------------------------------------
+
+\begin{itemize}
+\item Integrálok kiszámítása - cont'd
+\begin{itemize}
+\item Körintegrál(\textit{esint} csomagban):\\ \textbackslash oiint\textbackslash limits\_\{S\} F\textbackslash left(x,y\textbackslash right) \textbackslash,dx\textbackslash,dy\\$\rightarrow \oiint\limits_{S} F\left(x,y\right) \,dx\,dy$
+\end{itemize}
+\item Összegek kiszámítása:\\\textbackslash sum\^{}n\_\{i=1\} \textbackslash frac\{1\}\{x\_i\} $\rightarrow\sum_{n}^{i=1} \frac{1}{x_i}$\\\textbackslash sum\textbackslash limits\^{}n\_\{i=1\} \textbackslash frac\{1\}\{x\_i\} $\rightarrow\sum\limits^{n}_{i=1} \frac{1}{x_i}$
+\item Szorzatok kiszámítása:\\\textbackslash prod\^{}n\_\{i=1\} x\_i\ $\rightarrow\prod_{n}^{i=1} x_i$\\\textbackslash prod\textbackslash limits\^{}n\_\{i=1\} x\_i\ $\rightarrow\prod\limits^{n}_{i=1} x_i$
+\end{itemize}
+\vfill
+
+\pagebreak % --------------------------------------------------------------------------------------------------------------------
+
+\begin{itemize}
+\item Határértékek kiszámítása:\\\textbackslash lim\textbackslash limits\_\{n \textbackslash to \textbackslash infty\} a\_n $\rightarrow\lim\limits_{n \to \infty} a_n$
+
+\item Unió halmazrendszer:\\\textbackslash bigcup\textbackslash limits\_\{i=1\}\^{}\{n\} H\_\{i\} $\rightarrow\bigcup\limits_{i=1}^{n} H_{i}$
+\item Metszet halmazrendszer:\\\textbackslash bigcap\textbackslash limits\_\{i=1\}\^{}\{n\} H\_\{i\} $\rightarrow\bigcap\limits_{i=1}^{n} H_{i}$
+\end{itemize}
+\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[fragile,squeeze]
+\frametitle{Gyakorló feladatok}
+
+\begin{enumerate}
+\item Szerkesszék meg az alábbi képleteket:
+\begin{eqnarray*}
+\sin 2 x &=& 2 \sin x \cos x\\
+\cos 2 x &=& \cos^2 x - \sin^2 x\\
+\frac{\partial\rho}{\partial t}+\nabla\left(\rho\mathbf{v}\right)&=&0
+\end{eqnarray*}
+\item Másodfokú egyelet megoldóképletének levezetése.
+\item Írja fel a Maxwell egyenletek integrális alakját!
+\item Írja fel a Stokes-tételt!
+\item Írja fel a Gauss-Ostrogradskij tételt!
+\end{enumerate}
+\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[fragile,squeeze]
+\frametitle{Irodalomjegyzék létrehozása a szövegben}
+Az önsanyargató hajlamokkal rendelkezők használják a \texttt{\textbackslash bibitem} parancsot a \texttt{thebibliography} környezetben:
+\small
+\begin{verbatim*}
+\begin{thebibliography}{\textbf{Irodalomjegyzék}
+\bibitem[Bacsardi(2005)]{bacsi2}Bacsardi, L.\ 2005, Acta Astronautica, 57, 224
+}
+\bibitem[Bacsardi(2007)]{bacsi1}Bacsardi, L.\ 2007, Acta Astronautica, 61, 151
+\end{thebibliography}
+\end{verbatim*}
+
+Idézem Bacsárdi László összes művét: \textbackslash cite\{bacsi1,bacsi2\}.
+
+%\medskip
+%\textbf{Irodalomjegyzék}
+%\begin{thebibliography}
+%\item[Bacsardi(2005)]{bacsi1} Bacsardi, L.\ 2005, Acta Astronautica, 57, 224
+%\item[Bacsardi(2007)]{bacsi2} Bacsardi, L.\ 2007, Acta Astronautica, 61, 151 
+%\end{thebibliography}
+%\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[fragile,squeeze]
+\frametitle{Irodalomjegyzék létrehozása a \hologo{BibTeX} segédprogrammal}
+
+\begin{itemize}
+\item Használata:
+\begin{verbatim*}
+\bibliography{facsko_gabor_researchplan} 
+\bibliographystyle{plain}
+\end{verbatim*}
+\item Irodalomjegyzék formátumok: \texttt{plain}, \texttt{unsrt}, \texttt{alpha}, \texttt{abbvr}. Idézés: \texttt{\textbackslash cite\{\}}
+\item A \textit{natbib} csomaggal pl.~\textit{plainnat} (ld.~a csomag paramétereit). Idézés: \texttt{\textbackslash citep\{\}} \texttt{\textbackslash citet\{\}} (paraméterek).
+\item A \hologo{BibTeX} file tartalma: \texttt{article}, \texttt{book}, \texttt{report}.
+\item SAO/NASA Astrophysics Data System (ADS) a kész \hologo{BibTeX} formátumú bibliográfiai adatok lelőhelye:\\\texttt{http://adsabs.harvard.edu/}
+\end{itemize}
+\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}[fragile,squeeze,allowframebreaks]
+\frametitle{Példák \hologo{BibTeX} formátumokra}
+
+\begin{verbatim*}
+@ARTICLE{facsko08:_clust,
+   author = {{Facsk{\'o}}, G. and {Kecskem{\'e}ty}, K. and 
+{Erd{\H o}s}, G. and {T{\'a}trallyay}, M. and 
+{Daly}, P.~W. and {Dandouras}, I.},
+    title = "{A statistical study of hot flow 
+anomalies using Cluster data}",
+  journal = {Advances in Space Research},
+     year = 2008,
+   volume = 41,
+    pages = {1286-1291},
+      doi = {10.1016/j.asr.2008.02.005}
+}
+\end{verbatim*}
+\vfill
+
+%\pagebreak % --------------------------------------------------------------------------------------------------------------------
+
+\begin{verbatim*}
+@Book{laakso10:_clust_activ_archiv,
+  editor = 	 {{Laakso}, H. and {Taylor}, M. 
+and {Escoubet}, C.~P.}
+  title = 	 {The Cluster Active Archive},
+  publisher = 	 {Springer Science+Business Media B.V.},
+  year = 	 2010,
+  note = {Astrophysics and Space Science Proceedings, 
+ISBN 978-90-481-3498-4}},
+  doi = {10.1007/978-90-481-3499-1}
+}
+\end{verbatim*}
+\vfill
+
+%\pagebreak % --------------------------------------------------------------------------------------------------------------------
+
+\begin{verbatim*}
+@InProceedings{facsko10:_clust_hot_flow_anomal_obser,
+   author = {{Facsk{\'o}}, G. and {T{\'a}trallyay}, M. and 
+{Erd{\H o}s}, G. and {Dandouras}, I.},
+    title = "{Cluster Hot Flow Anomaly Observations 
+During Solar Cycle Minimum}",
+booktitle = {The Cluster Active Archive, Studying 
+the Earth's Space Plasma Environment},
+     year = 2010,
+   editor = "{Laakso, H., Taylor, M., \& Escoubet, C.~P.}",
+    pages = {369-375},
+      doi = {10.1007/978-90-481-3499-1\_25}
+}
+\end{verbatim*}
+\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+%\frametitle{Minden jó, ha a vége jó}
+
+\vfill
+\begin{center}
+\textbf{\huge Vége}
+
+\bigskip
+Köszönöm a figyelmet!
+\end{center}
+\vfill
+\end{frame}
+
+\end{document}

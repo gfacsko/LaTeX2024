@@ -1,0 +1,368 @@
+\documentclass[t,aspectratio=169]{beamer}
+
+\usepackage{soul}
+\usepackage[utf8]{inputenc}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\title{\hfill \includegraphics{MFE.png}\\Bevezetés a \LaTeX\ használatába}
+
+% \subtitle{1-4. előadás}
+
+\author{Dr.~Facskó Gábor, PhD\\\tiny főiskolai adjunktus, tudományos főmunkatárs\\\textit{facsko.gabor@uni-milton.hu}}
+
+\institute{\Tiny Milton Friedman Egyetem, Informatikai Tanszék, 1039 Budapest, Kelta utca 2.\\Wigner Fizikai Kutatóközpont, Űrfizikai és Űrtechnikai Osztály, 1121 Budapest, Konkoly-Thege Miklós út 29-33.\\ \texttt{https://wigner.hu/$\sim$facsko.gabor}}
+
+\date{2024.~február~24.}
+
+\logo{\includegraphics[height=0.9 true cm]{kekcsik.png}}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\frame{\titlepage}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{A tárgy célja}
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+\item Megismertetni a hallgatókkal egy platformfüggetlen, gyors, szabad tördelőszerkesztő programot
+\item Megmutatni, hogy van élet az MS Office-n és az OpenOffice-n túl
+\item Megkönnyíteni a laborjegyzőkönyv, szakdolgozat és diplomamunka írást
+\end{itemize}
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{A tárgy teljesítésnek követelményei}
+\begin{enumerate}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+\item Laborgyakorlat, de nem kötelező bejárni levezősöknek. 
+\item Kapcsolódjanak be az online előadásba, ta\-nul\-má\-nyoz\-zák a slide-okat, konzultáljanak, olvassák el a köny\-vet, hallgassák meg a felvételeket
+\item Tanulmányozzák az interneten található oldalakat
+ \item Küldjenek be a félév végéig két beadandó feladatot
+\begin{enumerate}
+\item A szakdolgozatukat, vagy egy korábbi önálló labor jegyzőkönyvüket, esetleg egy rövidebb szöveget írják át \LaTeX-be és küldjék el az előadónak
+\item Az előző feladat nehézségével fordítottan a\-rá\-nyo\-san kijelöl néhány oldalt és azt be kell gépelni és beküldeni
+\end{enumerate}
+\end{enumerate}
+Ajánlott olvasmány: \textit{Wettl Ferenc-Mayer Gyula-Sudár Csaba: \LaTeX\ kezdőknek és haladóknak} 
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Alapfogalmak, bevezetés}
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\item Szövegszerkesztő: notepad, vi, emacs, joe
+\item Fejlettebb: MS Office, OpenOffice
+\item Tördelőszerkesztő: képes átfogóan formázni a szö\-ve\-get, ábrákat, táblázatokat pozicionálni, tipográfiai sza\-bá\-lyo\-kat vesz figyelembe, ismeri a lingatúrákat
+\item \TeX\ tördelőszerkesztő. Nyomdakész anyagokat produkál. Könnyű matematikai képleteket és hosszabb szöveget, könyvet és cikket készíteni vele (Kifejlesztése: \textit{Donald Ervin Knuth: A számítógép-prog\-ra\-mo\-zás művészete}.)
+\end{itemize}
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Alapfogalmak, bevezetés - cont'd}
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\item \LaTeX\ egy \TeX\ makró csomag, amely lényegesen megkönnyíti a programrendszer használatát
+\item \st{dvi file: platform independent file. Megn{\'e}zhet{\H{o}} (xdvi), nyomtahat{\'o} form{\'a}tumm{\'a} alak{\'\i}that{\'o}, vagy postscript{\'e}, encapsulated postscript{\'e} konvert{\'a}lhat{\'o}}\\Manapság már pdflatex-hel Portable Document Formatot (pdf) hoz létre a \LaTeX\ fordító
+\item A postscript egy speciális nyomtató nyelv
+\item Az encapsulated postscript a nyomtató nyelv keretes, egy oldalas változata
+\end{itemize}
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Alapfogalmak, bevezetés - cont'd}
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+\item A \LaTeX\ előnyei 
+\begin{itemize}
+\item Nagyon szép, nyomdakész szöveget állít elő
+\item Gyors, ingyenes, platformfüggetlen
+\item Nem kell az ábrák, táblázatok elhelyezésével tö\-rőd\-ni
+\item Könnyebb képletet szerkeszteni benne
+\item Lehet benne levelet, prezentációt, posztert, cikket, disszertációt készíteni (de nem muszáj, sőt!)
+\end{itemize}
+\item A \LaTeX\ hátrányai
+\begin{itemize}
+\item Néhány oldalas szöveg és prezentáció készítés esetén lassabb és kö\-rül\-mé\-nye\-sebb, mint a meg\-szo\-kott szö\-veg\-szer\-kesz\-tők
+\end{itemize}
+\end{itemize}
+%\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Alapfogalmak, bevezetés - cont'd}
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+\item Szerkesztési ciklus: 
+\bigskip
+\begin{list}{}{}
+\item \framebox{Forrás file}
+\item $\downarrow$
+\item \framebox{Fordítás}
+\item $\downarrow$ 
+\item \framebox{dvi file}  $\rightarrow$ \framebox{Nyomtatás}
+\item $\downarrow$
+\item \framebox{Megjelenítés} 
+\end{list}
+\bigskip
+Vagy amit akarunk\dots
+\end{itemize}
+%\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Alapfogalmak, bevezetés - cont'd}
+\begin{itemize}
+\setlength{\parskip}{0pt}
+\item MS Windows: MiKTeX keret program
+\item UNIX/Linux: tetex programcsalád 
+\begin{list}{+}{}
+\item emacs szövegszerkesztő
+\item auctex (emacs) makrógyűjtemény
+\item vi/vim szövegszerkesztő
+\item Utófeldolgozás:
+\begin{list}{-}{}
+\item dvi2ps: postscriptre konvertál
+\item dvi2pdf: Pdf file konvertál
+\item pdfunify: egyesíti a pfileokat
+\end{list}
+\end{list}
+\end{itemize}
+%\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Első szöveg megszerkesztése, fordítása, megjelenítése}
+\begin{list}{\texttt{facsko@elendil$\sim$\$}}{}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+\item emacs elso.tex
+\end{list}
+
+\textbackslash documentclass[a4paper,12pt]\{article\}
+
+\textbackslash begin \{document \}\\
+Megy ez.\\
+\textbackslash end\{document\}
+
+\begin{list}{\texttt{facsko@elendil$\sim$\$}}{}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+\item latex elso.tex
+\item xdvi elso.dvi
+\item dvips -o elso.ps elso.dvi
+\item dvipdf elso.dvi elso.pdf
+\item xpdf elso.pdf
+\item acroread elso.pdf
+\\ 
+\item pdflatex elso.tex
+\item xpdf elso.pdf
+\end{list}
+%\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Betűtípusok}
+
+\textbackslash documentclass[a4paper,12pt]\{article\}
+
+\textbackslash begin \{document \}\\
+Megy ez.\\
+\textbackslash textbf\{Megy ez.\}\\
+\textbackslash textit\{Megy ez.\}\\
+\textbackslash texttt\{Megy ez.\}\\
+\textbackslash textsc\{Megy ez.\}\\
+\textbackslash end\{document\}
+%\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Speciális karakterek}
+
+Próbáljuk ki: \%, \{, \}, $\sim$, \_
+
+Hibaüzenetek.
+\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Magyarítás}
+
+\textbackslash documentclass[a4paper,12pt]\{article\}
+
+\textbackslash begin \{document \}\\
+Az én második szövegem.\\
+\textbackslash end\{document\}
+
+\textrm{Az n msodik szvegem.}
+
+\texttt{\textbackslash usepackage[utf8]\{inputenc\}}
+%\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Bekezdések, sorok, listák}
+
+\begin{itemize}
+\item Bekezdések formázása
+\setlength{\parskip}{2pt}
+\begin{list}{}{}
+\setlength{\itemsep}{0pt}
+\item \textbackslash parindent: Behúzás a bekezdés elején
+\item \textbackslash noindent: Behúzás kikapcsolása
+\item \textbackslash parskip: Kihagyás a bekezdések között
+\end{list}
+
+\item Sortörés, oldaltörés
+\setlength{\parskip}{2pt}
+\begin{list}{}{}
+\setlength{\itemsep}{0pt}
+\item \textbackslash\textbackslash: sortörés
+\item \textbackslash pagebreak: oldaltörés
+\end{list}
+
+\item Listák
+\setlength{\parskip}{2pt}
+\begin{list}{}{}
+\setlength{\itemsep}{0pt}
+\item \textbackslash begin\{itemize\}
+\item \textbackslash begin\{enumerate\}
+\item \textbackslash begin\{list\}
+\end{list}
+\end{itemize}
+%\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Képek és elhelyezésük}
+\begin{itemize}  
+\item Csomag és utasítás:
+\setlength{\parskip}{-5pt}
+\begin{list}{}{}
+\setlength{\itemsep}{0pt}
+\item \textbackslash usepackage[final]\{graphicx\}
+\item \textbackslash includegraphics[width=300pt]\{jgr-2014-year-f03.eps\}
+\end{list}
+\item Használjuk a \textit{figure} környezetet:
+\setlength{\parskip}{-2pt}
+\begin{list}{}{}
+\setlength{\itemsep}{0pt}
+\item \textbackslash begin\{figure\}[h]
+\item \textbackslash centering
+\item \textbackslash caption\{Magyarázó szöveg\}
+\item \textbackslash label\{fig:címke\}
+\item \textbackslash end\{figure\}
+\end{list}
+\item A \textit{figure$*$} környezet elhagyja az automatikus sor\-szá\-mo\-zást, vagy teljes szé\-les\-ség\-ben helyezi el az ábrát
+
+\item Az ábrák és a táblázatok ún.~lebegő objektumok és a \LaTeX\ irányítja, hogy hova kerüljenek. Minimális irányítás:  h - helyben, t - top, b - bottom, ! - nyomtékosítás
+\end{itemize}
+%\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Táblázatok, tabulátorok}
+\setlength{\parskip}{6pt}
+\begin{list}{}{}
+\setlength{\itemsep}{0pt}
+\item \textbackslash begin\{table\}[h]
+\item \textbackslash centering
+\item \textbackslash begin\{tabular\}[c]{clh}
+\item Első \& Második \& Harmadik oszlop \textbackslash\textbackslash
+\item \textbackslash end\{tabular\}
+\item \textbackslash caption\{Magyarázó szöveg\}
+\item \textbackslash label\{tab:tablazat\}
+\item \textbackslash end\{table\}
+\end{list}
+Több oszlop összevonása: \textit{multicolumn} parancs\\
+Több sor összevonása: \textit{multirow} parancs\\
+Hosszú táblázatok: \textit{longtable} környezet\\
+%\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Címkék, hivatkozások, számlálók}
+\setlength{\parskip}{6pt}
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+\item A címke (label) egy viszonyítási pont a szövegben:\\ \texttt{\textbackslash label\{fig:abra\}}
+\item A hivatkozás a címkére hivatkozik:\\ \texttt{\textbackslash ref\{fig:abra\}}
+\item Képre, bekezdésre, szövegre, táblázatra ugyanúgy hivatkozunk. Az előtag csak konvenció, nem kötelező
+\item Mind a listák számát, a fejezeteket, a lábjegyzeteket, az ábrák és táblázatok számát a \LaTeX\ nyilvántartja. A változók neve: számláló.
+\item A számlálók értékét módosítani lehet:\\ \textbackslash setcounter\{enumi\}\{4\}
+\end{itemize}
+%\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Dokumentum osztályok}
+\setlength{\parskip}{6pt}
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+\item Book, report, slides, article
+\item \textbackslash section\{cím\}, \textbackslash section$*$\{cím\}
+\item \textbackslash subsection\{cím\},\textbackslash subsection$*$\{cím\} 
+\item \textbackslash subsubsection\{cím\}, \textbackslash subsubsection$*$\{cím\}
+\item \textbackslash paragraph\{cím\}
+\item \textbackslash subparagraph\{cím\}
+\item \textbackslash chapter\{cím\}, \textbackslash chapter$*$\{cím\}
+\end{itemize}
+
+Feladat: kipróbálni az eddigi szövegek viselkedését, a fenti dokumentum osztályokkal. Milyen paraméterei vannak a különféle osztályoknak?
+%\vfill
+\end{frame}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{frame}
+%\frametitle{Minden jó, ha a vége jó}
+
+\vfill
+\begin{center}
+\textbf{\huge Vége}
+
+\bigskip
+Köszönöm a figyelmet!
+\end{center}
+\vfill
+\end{frame}
+
+\end{document}
