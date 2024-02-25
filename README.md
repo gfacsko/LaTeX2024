@@ -1,5 +1,5 @@
 # LaTeX2024
-Segédlet a (VH-MIT010) Bevezetés a LaTeX használatába kurzushoz. A videók megtekinthetők a Youtube-on is:
+Segédlet a Milton Friedman Egyetem levelező tagozatán a 2023/2024-es tanév 2. félévében tartott (VH-MIT010) Bevezetés a LaTeX használatába kurzushoz. Az előadás videó felvételei megtekinthetők a Youtube-on is:
 
 https://www.youtube.com/playlist?list=PL5VzM0cemK26eyBBx69XneAtex5xol3k8
 
