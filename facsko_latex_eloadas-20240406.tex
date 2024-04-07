@@ -1,0 +1,110 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{esint}
+
+\setlength{\parindent}{0pt} % Nincs behúzás
+\setlength{\parskip}{6pt}  % Fél sor kihagyás a fejezetek között
+
+
+\begin{document}
+
+\section{Példa rendes szövegre}
+
+Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. Példaszöveg. {Példaszöveg.}  \textbf{Példaszöveg.}
+
+\section{Matematikai szövegek}
+
+\subsection{\TeX-szerű képletek}
+
+A szénsav kémiai képlete a $H_{2}CO_{3}$ formula. 
+
+A szénsav kémiai képlete a $$H_{2}CO_{3}$$ formula. 
+
+Példák indexelésre: $H_2CO_3$, $H_{2}CO_{3}$, ${H}_{2}C{O}_{3}$.
+
+Pithagorasz-tétele: $$a^{2}+b^{2}=c^{2}$$
+
+\subsection{\LaTeX-szerű képletek}
+%\subsection*{\LaTeX-szerű képletek}
+
+\( F_{i} \)
+
+\[ F_{i} \]
+
+Szövegközi képletek \textit{math} környezettel: 
+\begin{math}
+%F_{i}
+\frac{\sqrt[5]{a^3}}{5}
+\end{math}
+így írhatóak.
+
+Kiemelt képletek \textit{equation} környezettel: 
+\begin{equation}
+\label{eq:fi}
+F_{i}
+\end{equation}
+így és
+\begin{equation}
+\label{eq:tort}
+\frac{\sqrt[5]{a^3}}{5}
+\end{equation}
+így írhatóak.
+
+Feljebb példát adtunk egy indexre (\ref{eq:fi}), továbbá egy törtre (\ref{eq:tort}).
+
+\begin{eqnarray}
+c & = & \frac{\sqrt{a^3}}{b} \\
+F_L & = & q \cdot (\mathbf{v} \times \mathbf{B}) \\
+E &=& m c^2
+\end{eqnarray}
+
+\begin{eqnarray*}
+c & = & \frac{\sqrt{a^3}}{b} \\
+F_L & = & q \cdot (\mathbf{v} \times \mathbf{B}) \\
+E &=& m c^2
+\end{eqnarray*}
+
+\subsection{Matematikai formulák}
+
+Törtek: $\frac{a}{b}$.
+
+Gyökvonás: $\sqrt{a}$, $\sqrt[3]{b}$.
+
+Trigonometria: $\sin x$, $f\left(x\right)=\frac{\sin x}{x}$.
+
+Szimbólumok: $a+b+c=d$, $a<b$, $a \le b$, $a \ge b$, $a \ne b$, $a \sim b$.
+
+Metszet: $A \cap B$, unió: $A \cup B$.
+
+Példák görök betűkre: $\alpha$, $\beta$, $\gamma$,  $\Gamma$, $\Theta$, $\theta$, $\vartheta$.
+
+Nabla: $\nabla \mathbf{B} = 0$.
+
+\subsubsection{Analízis}
+
+Derivált: $$\frac{df}{dx},$$ ahol $f\left(x\right)$ x-től függő fügvény.
+
+Paricális derivált: $$ \frac{\partial g}{\partial x},$$  másodfokú parciális deriváltak:  $$\frac{\partial^2 g}{\partial^2 x},$$ $$\frac{\partial^2 g}{\partial x \partial y},$$ $$\frac{\partial^2 g}{\partial^2 y},$$ ahol $g\left(x,y\right)$ x-től és y-tól függő függvény.
+
+Határozatlan integrál: $$ \int \frac{1}{x} dx.$$
+
+Határozott integrál: $$\int\limits_{-\infty}^{\infty} \frac{\sin x}{x} dx = 1.$$
+
+Többszörös integrálás: $$\iiint g\left(x,y,z\right) dx\,dy\,dz.$$
+
+Körintegrál: $$\oiint\limits_{S} F\left(x,y\right) dx\,dy.$$
+
+\subsubsection{Határérték, összegek, egyebek}
+
+Összegek: $\sum\limits^n_{i=1} \frac{1}{x_i}$, $$\sum\limits^n_{i=1} \frac{1}{x_i}.$$
+
+Products: $\prod\limits^n_{i=1} \frac{1}{x_i}$, $$\prod\limits^n_{i=1} \frac{1}{x_i}.$$
+
+Határértékek: $$\lim\limits_{n \to \infty} a_n.$$
+
+Unió halmazrendszer: $$\bigcup\limits_{i=1}^{n} H_{i}.$$
+
+Metszet halmazrendszer: $$\bigcap\limits_{i=1}^{n} H_{i}.$$
+
+\end{document}
