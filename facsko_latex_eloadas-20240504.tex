@@ -1,0 +1,188 @@
+%\documentclass[a4paper,12pt,draft]{article}
+\documentclass[a4paper,12pt,draft]{report}
+%\documentclass[a4paper,12pt]{book}
+
+\usepackage{hologo}
+\usepackage{natbib}
+\usepackage[magyar]{babel}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+%\pagestyle{plain}
+%\thispagestyle{headings}
+
+\begin{document}
+
+\author{Facskó Gábor}
+
+\title{Példa  \hologo{BibTeX} alkalmazására}
+
+\date{\today}
+
+\maketitle
+
+%\begin{titlepage}
+%\textbf{Facskó Gábor}
+
+%\textit{Valami}
+%\end{titlepage}
+
+\begin{abstract}
+Suspendisse nibh magna, luctus vel odio sit amet, mattis rhoncus urna. Praesent sem urna, vulputate eu sapien a, efficitur tempor mi. Praesent rhoncus lacus vel viverra sagittis. Vivamus tincidunt facilisis tortor, nec congue nisi. Fusce tincidunt sapien mi, vehicula placerat justo luctus tempor. Vestibulum nec hendrerit arcu, at gravida magna. Vivamus aliquet iaculis lorem id scelerisque. Nam porttitor condimentum posuere.
+\end{abstract}
+
+\pagenumbering{roman}
+
+\addcontentsline{toc}{chapter}{Tartalomjegyzék}
+\tableofcontents
+
+\chapter*{Bevezetés}
+\addcontentsline{toc}{chapter}{Bevezetés}
+\pagenumbering{arabic}
+
+Ebben a korszakalkotó műben\dots
+
+\chapter{Sed sodales, ex ut iaculis vehicula}
+\label{cha:sed}
+
+Lorem ipsum\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} dolor sit amet, consectetur adipiscing elit. Sed sodales, ex ut iaculis vehicula, est eros viverra eros, nec congue ex est vel ipsum. Vestibulum vel condimentum metus. Maecenas varius quis arcu vel malesuada. Vestibulum placerat bibendum ultricies. Ut\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} cursus ligula eget risus tincidunt, sit amet convallis tellus ultricies. Cras mauris augue, interdum non nunc et, commodo congue turpis. Cras quis egestas erat. Nulla varius ipsum id orci tristique tincidunt. Integer lacus nisi, feugiat vitae nulla a, vestibulum fringilla ante. \citep{facsko_sw2024}
+
+\ref{cha:sed}.~fejezet
+
+\section{Vivamus eget nulla lacus}
+
+Donec libero sapien, faucibus eget pretium quis, blandit tempus arcu. Praesent elementum orci nec magna sollicitudin, fermentum pharetra enim tincidunt. Praesent rutrum, eros id\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} tempor malesuada, arcu nisi ullamcorper elit, vitae euismod ligula dolor eu odio.  Fusce laoreet dui et elementum lobortis. Fusce lorem nunc, imperdiet at euismod a, posuere sed massa. Sed eu dolor eget ligula aliquet facilisis. Aenean pharetra dapibus fermentum. In nec pharetra libero, at facilisis leo. In ornare nec metus a porta \citep[See][and references therein]{facsko2022_ssr}.
+
+\subsection{Vivamus et placerat neque}
+
+\citet{facsko2022_ssr} Nullam vel ante posuere, tempor arcu vitae, tempor felis. Aliquam mollis faucibus ultricies. Donec fringilla lorem nisi, in congue dolor dignissim vel. Maecenas sollicitudin sit amet tortor vel tincidunt. . Praesent eu fermentum nisi, ac aliquet risus. Nullam eget consectetur mi. Ut commodo, lorem vel vulputate feugiat, eros metus lobortis libero, quis fringilla quam ante ut orci. Ut quis quam et ipsum tincidunt vehicula. Quisque finibus ligula sed\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} ornare rhoncus. Aliquam vitae mauris orci. Mauris id hendrerit\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} velit. Maecenas placerat ante eget est auctor rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nibh dui, laoreet at erat id, commodo blandit quam \citep{janhunen2012gumics}.
+
+\subsubsection{Fusce vulputate ac ex ac viverra}
+
+Praesent imperdiet in nisl at cursus\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.}.  Aliquam at justo mi. Proin tristique arcu erat, vitae finibus diam ultrices ut. Praesent euismod ex a quam suscipit, ut efficitur neque elementum. Nullam ullamcorper, nisi quis auctor imperdiet, odio justo rutrum velit, a pharetra ipsum nulla quis velit. Pellentesque vitae ipsum nulla. Sed sit amet arcu cursus, vulputate mauris quis, feugiat nisi. Vivamus sit amet neque a nunc finibus condimentum. Ut neque nunc, blandit et nisi a, dapibus facilisis sapien. Cras non mauris vulputate, consequat massa tempor, tincidunt nibh. Mauris eu neque sed dolor posuere mattis. Maecenas lobortis ac sapien vitae pretium.
+
+\paragraph{Suspendisse nibh magna}, luctus vel odio sit amet, mattis rhoncus urna. Praesent sem urna, vulputate eu sapien a, efficitur tempor mi. Praesent rhoncus lacus vel viverra sagittis. Vivamus tincidunt facilisis tortor, nec congue nisi. Fusce tincidunt sapien mi, vehicula placerat justo luctus tempor. Vestibulum nec hendrerit arcu, at gravida magna. Vivamus aliquet iaculis lorem id scelerisque. Nam porttitor condimentum posuere.
+
+\subparagraph{Suspendisse nibh magna}, luctus vel odio sit amet, mattis rhoncus urna. Praesent sem urna, vulputate eu sapien a, efficitur tempor mi. Praesent rhoncus lacus vel viverra sagittis. Vivamus tincidunt facilisis tortor, nec congue nisi. Fusce tincidunt sapien mi, vehicula placerat justo luctus tempor. Vestibulum nec hendrerit arcu, at gravida magna. Vivamus aliquet iaculis lorem id scelerisque. Nam porttitor condimentum posuere.
+
+\chapter{Sed sodales, ex ut iaculis vehicula}
+\label{cha:sed}
+
+Lorem ipsum\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} dolor sit amet, consectetur adipiscing elit. Sed sodales, ex ut iaculis vehicula, est eros viverra eros, nec congue ex est vel ipsum. Vestibulum vel condimentum metus. Maecenas varius quis arcu vel malesuada. Vestibulum placerat bibendum ultricies. Ut\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} cursus ligula eget risus tincidunt, sit amet convallis tellus ultricies. Cras mauris augue, interdum non nunc et, commodo congue turpis. Cras quis egestas erat. Nulla varius ipsum id orci tristique tincidunt. Integer lacus nisi, feugiat vitae nulla a, vestibulum fringilla ante. \citep{facsko_sw2024}
+
+\ref{cha:sed}.~fejezet
+
+\section{Vivamus eget nulla lacus}
+
+Donec libero sapien, faucibus eget pretium quis, blandit tempus arcu. Praesent elementum orci nec magna sollicitudin, fermentum pharetra enim tincidunt. Praesent rutrum, eros id\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} tempor malesuada, arcu nisi ullamcorper elit, vitae euismod ligula dolor eu odio.  Fusce laoreet dui et elementum lobortis. Fusce lorem nunc, imperdiet at euismod a, posuere sed massa. Sed eu dolor eget ligula aliquet facilisis. Aenean pharetra dapibus fermentum. In nec pharetra libero, at facilisis leo. In ornare nec metus a porta \citep[See][and references therein]{facsko2022_ssr}.
+
+\subsection{Vivamus et placerat neque}
+
+\citet{facsko2022_ssr} Nullam vel ante posuere, tempor arcu vitae, tempor felis. Aliquam mollis faucibus ultricies. Donec fringilla lorem nisi, in congue dolor dignissim vel. Maecenas sollicitudin sit amet tortor vel tincidunt. . Praesent eu fermentum nisi, ac aliquet risus. Nullam eget consectetur mi. Ut commodo, lorem vel vulputate feugiat, eros metus lobortis libero, quis fringilla quam ante ut orci. Ut quis quam et ipsum tincidunt vehicula. Quisque finibus ligula sed\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} ornare rhoncus. Aliquam vitae mauris orci. Mauris id hendrerit\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} velit. Maecenas placerat ante eget est auctor rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nibh dui, laoreet at erat id, commodo blandit quam \citep{janhunen2012gumics}.
+
+\subsubsection{Fusce vulputate ac ex ac viverra}
+
+Praesent imperdiet in nisl at cursus\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.}. . Aliquam at justo mi. Proin tristique arcu erat, vitae finibus diam ultrices ut. Praesent euismod ex a quam suscipit, ut efficitur neque elementum. Nullam ullamcorper, nisi quis auctor imperdiet, odio justo rutrum velit, a pharetra ipsum nulla quis velit. Pellentesque vitae ipsum nulla. Sed sit amet arcu cursus, vulputate mauris quis, feugiat nisi. Vivamus sit amet neque a nunc finibus condimentum. Ut neque nunc, blandit et nisi a, dapibus facilisis sapien. Cras non mauris vulputate, consequat massa tempor, tincidunt nibh. Mauris eu neque sed dolor posuere mattis. Maecenas lobortis ac sapien vitae pretium.
+
+\paragraph{Suspendisse nibh magna}, luctus vel odio sit amet, mattis rhoncus urna. Praesent sem urna, vulputate eu sapien a, efficitur tempor mi. Praesent rhoncus lacus vel viverra sagittis. Vivamus tincidunt facilisis tortor, nec congue nisi. Fusce tincidunt sapien mi, vehicula placerat justo luctus tempor. Vestibulum nec hendrerit arcu, at gravida magna. Vivamus aliquet iaculis lorem id scelerisque. Nam porttitor condimentum posuere.
+
+\subparagraph{Suspendisse nibh magna}, luctus vel odio sit amet, mattis rhoncus urna. Praesent sem urna, vulputate eu sapien a, efficitur tempor mi. Praesent rhoncus lacus vel viverra sagittis. Vivamus tincidunt facilisis tortor, nec congue nisi. Fusce tincidunt sapien mi, vehicula placerat justo luctus tempor. Vestibulum nec hendrerit arcu, at gravida magna. Vivamus aliquet iaculis lorem id scelerisque. Nam porttitor condimentum posuere.
+
+\chapter{Sed sodales, ex ut iaculis vehicula}
+\label{cha:sed}
+
+Lorem ipsum\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} dolor sit amet, consectetur adipiscing elit. Sed sodales, ex ut iaculis vehicula, est eros viverra eros, nec congue ex est vel ipsum. Vestibulum vel condimentum metus. Maecenas varius quis arcu vel malesuada. Vestibulum placerat bibendum ultricies. Ut\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} cursus ligula eget risus tincidunt, sit amet convallis tellus ultricies. Cras mauris augue, interdum non nunc et, commodo congue turpis. Cras quis egestas erat. Nulla varius ipsum id orci tristique tincidunt. Integer lacus nisi, feugiat vitae nulla a, vestibulum fringilla ante. \citep{facsko_sw2024}
+
+\ref{cha:sed}.~fejezet
+
+\section{Vivamus eget nulla lacus}
+
+Donec libero sapien, faucibus eget pretium quis, blandit tempus arcu. Praesent elementum orci nec magna sollicitudin, fermentum pharetra enim tincidunt. Praesent rutrum, eros id\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} tempor malesuada, arcu nisi ullamcorper elit, vitae euismod ligula dolor eu odio.  Fusce laoreet dui et elementum lobortis. Fusce lorem nunc, imperdiet at euismod a, posuere sed massa. Sed eu dolor eget ligula aliquet facilisis. Aenean pharetra dapibus fermentum. In nec pharetra libero, at facilisis leo. In ornare nec metus a porta \citep[See][and references therein]{facsko2022_ssr}.
+
+\subsection{Vivamus et placerat neque}
+
+\citet{facsko2022_ssr} Nullam vel ante posuere, tempor arcu vitae, tempor felis. Aliquam mollis faucibus ultricies. Donec fringilla lorem nisi, in congue dolor dignissim vel. Maecenas sollicitudin sit amet tortor vel tincidunt. . Praesent eu fermentum nisi, ac aliquet risus. Nullam eget consectetur mi. Ut commodo, lorem vel vulputate feugiat, eros metus lobortis libero, quis fringilla quam ante ut orci. Ut quis quam et ipsum tincidunt vehicula. Quisque finibus ligula sed\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} ornare rhoncus. Aliquam vitae mauris orci. Mauris id hendrerit\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} velit. Maecenas placerat ante eget est auctor rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nibh dui, laoreet at erat id, commodo blandit quam \citep{janhunen2012gumics}.
+
+\subsubsection{Fusce vulputate ac ex ac viverra}
+
+Praesent imperdiet in nisl at cursus\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.}. . Aliquam at justo mi. Proin tristique arcu erat, vitae finibus diam ultrices ut. Praesent euismod ex a quam suscipit, ut efficitur neque elementum. Nullam ullamcorper, nisi quis auctor imperdiet, odio justo rutrum velit, a pharetra ipsum nulla quis velit. Pellentesque vitae ipsum nulla. Sed sit amet arcu cursus, vulputate mauris quis, feugiat nisi. Vivamus sit amet neque a nunc finibus condimentum. Ut neque nunc, blandit et nisi a, dapibus facilisis sapien. Cras non mauris vulputate, consequat massa tempor, tincidunt nibh. Mauris eu neque sed dolor posuere mattis. Maecenas lobortis ac sapien vitae pretium.
+
+\paragraph{Suspendisse nibh magna}, luctus vel odio sit amet, mattis rhoncus urna. Praesent sem urna, vulputate eu sapien a, efficitur tempor mi. Praesent rhoncus lacus vel viverra sagittis. Vivamus tincidunt facilisis tortor, nec congue nisi. Fusce tincidunt sapien mi, vehicula placerat justo luctus tempor. Vestibulum nec hendrerit arcu, at gravida magna. Vivamus aliquet iaculis lorem id scelerisque. Nam porttitor condimentum posuere.
+
+\subparagraph{Suspendisse nibh magna}, luctus vel odio sit amet, mattis rhoncus urna. Praesent sem urna, vulputate eu sapien a, efficitur tempor mi. Praesent rhoncus lacus vel viverra sagittis. Vivamus tincidunt facilisis tortor, nec congue nisi. Fusce tincidunt sapien mi, vehicula placerat justo luctus tempor. Vestibulum nec hendrerit arcu, at gravida magna. Vivamus aliquet iaculis lorem id scelerisque. Nam porttitor condimentum posuere.
+
+\chapter{Sed sodales, ex ut iaculis vehicula}
+\label{cha:sed}
+
+Lorem ipsum\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} dolor sit amet, consectetur adipiscing elit. Sed sodales, ex ut iaculis vehicula, est eros viverra eros, nec congue ex est vel ipsum. Vestibulum vel condimentum metus. Maecenas varius quis arcu vel malesuada. Vestibulum placerat bibendum ultricies. Ut\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} cursus ligula eget risus tincidunt, sit amet convallis tellus ultricies. Cras mauris augue, interdum non nunc et, commodo congue turpis. Cras quis egestas erat. Nulla varius ipsum id orci tristique tincidunt. Integer lacus nisi, feugiat vitae nulla a, vestibulum fringilla ante. \citep{facsko_sw2024}
+
+\ref{cha:sed}.~fejezet
+
+\section{Vivamus eget nulla lacus}
+
+Donec libero sapien, faucibus eget pretium quis, blandit tempus arcu. Praesent elementum orci nec magna sollicitudin, fermentum pharetra enim tincidunt. Praesent rutrum, eros id\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} tempor malesuada, arcu nisi ullamcorper elit, vitae euismod ligula dolor eu odio.  Fusce laoreet dui et elementum lobortis. Fusce lorem nunc, imperdiet at euismod a, posuere sed massa. Sed eu dolor eget ligula aliquet facilisis. Aenean pharetra dapibus fermentum. In nec pharetra libero, at facilisis leo. In ornare nec metus a porta \citep[See][and references therein]{facsko2022_ssr}.
+
+\subsection{Vivamus et placerat neque}
+
+\citet{facsko2022_ssr} Nullam vel ante posuere, tempor arcu vitae, tempor felis. Aliquam mollis faucibus ultricies. Donec fringilla lorem nisi, in congue dolor dignissim vel. Maecenas sollicitudin sit amet tortor vel tincidunt. . Praesent eu fermentum nisi, ac aliquet risus. Nullam eget consectetur mi. Ut commodo, lorem vel vulputate feugiat, eros metus lobortis libero, quis fringilla quam ante ut orci. Ut quis quam et ipsum tincidunt vehicula. Quisque finibus ligula sed\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} ornare rhoncus. Aliquam vitae mauris orci. Mauris id hendrerit\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.} velit. Maecenas placerat ante eget est auctor rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nibh dui, laoreet at erat id, commodo blandit quam \citep{janhunen2012gumics}.
+
+\subsubsection{Fusce vulputate ac ex ac viverra}
+
+Praesent imperdiet in nisl at cursus\footnote{Praesent nec fermentum lorem. Etiam faucibus viverra ipsum non tempus. Cras aliquam lacinia neque convallis pulvinar.}. . Aliquam at justo mi. Proin tristique arcu erat, vitae finibus diam ultrices ut. Praesent euismod ex a quam suscipit, ut efficitur neque elementum. Nullam ullamcorper, nisi quis auctor imperdiet, odio justo rutrum velit, a pharetra ipsum nulla quis velit. Pellentesque vitae ipsum nulla. Sed sit amet arcu cursus, vulputate mauris quis, feugiat nisi. Vivamus sit amet neque a nunc finibus condimentum. Ut neque nunc, blandit et nisi a, dapibus facilisis sapien. Cras non mauris vulputate, consequat massa tempor, tincidunt nibh. Mauris eu neque sed dolor posuere mattis. Maecenas lobortis ac sapien vitae pretium.
+
+\paragraph{Suspendisse nibh magna}, luctus vel odio sit amet, mattis rhoncus urna. Praesent sem urna, vulputate eu sapien a, efficitur tempor mi. Praesent rhoncus lacus vel viverra sagittis. Vivamus tincidunt facilisis tortor, nec congue nisi. Fusce tincidunt sapien mi, vehicula placerat justo luctus tempor. Vestibulum nec hendrerit arcu, at gravida magna. Vivamus aliquet iaculis lorem id scelerisque. Nam porttitor condimentum posuere.
+
+\subparagraph{Suspendisse nibh magna}, luctus vel odio sit amet, mattis rhoncus urna. Praesent sem urna, vulputate eu sapien a, efficitur tempor mi. Praesent rhoncus lacus vel viverra sagittis. Vivamus tincidunt facilisis tortor, nec congue nisi. Fusce tincidunt sapien mi, vehicula placerat justo luctus tempor. Vestibulum nec hendrerit arcu, at gravida magna. Vivamus aliquet iaculis lorem id scelerisque. Nam porttitor condimentum posuere.
+
+
+\bibliography{facsko_latex_eloadas-20240504}
+\bibliographystyle{plainnat}
+\addcontentsline{toc}{chapter}{Irodalomjegyzék}
+
+%\begin{thebibliography}{3}
+%\providecommand{\natexlab}[1]{#1}
+%\providecommand{\url}[1]{\texttt{#1}}
+%\expandafter\ifx\csname urlstyle\endcsname\relax
+%  \providecommand{\doi}[1]{doi: #1}\else
+%  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+%\bibitem[{Facsko} et~al.(2024){Facsko}, {Koban}, {Biro}, and
+% {Lkhagvadorj}]{facsko_sw2024}
+%Gabor {Facsko}, Gergely {Koban}, Nikolett {Biro}, and Munkhjargal
+ % {Lkhagvadorj}.
+%\newblock {Space Weather Effects on Critical Infrastructure}.
+%\newblock In \emph{In: Kov{\'a}cs}, pages 45--56, March 2024.
+%\newblock \doi{10.1007/978-3-031-47990-8\_5}.
+
+%\bibitem[Janhunen et~al.(2012)Janhunen, Palmroth, Laitinen, Honkonen, Juusola,
+ % Facsk{\'o}, and Pulkkinen]{janhunen2012gumics}
+%P~Janhunen, M~Palmroth, T~Laitinen, I~Honkonen, L~Juusola, G~Facsk{\'o}, and
+%  TI~Pulkkinen.
+%\newblock The gumics-4 global mhd magnetosphere--ionosphere coupling
+ % simulation.
+%\newblock \emph{Journal of Atmospheric and Solar-Terrestrial Physics},
+%  80:\penalty0 48--59, 2012.
+
+%\bibitem[{Zhang} et~al.(2022){Zhang}, {Zong}, {Connor}, {Delamere},
+ % {Facsk{\'o}}, {Han}, {Hasegawa}, {Kallio}, {Kis}, {Le}, {Lemb{\`e}ge}, {Lin},
+ % {Liu}, {Oksavik}, {Omidi}, {Otto}, {Ren}, {Shi}, {Sibeck}, and
+ % {Yao}]{facsko2022_ssr}
+%Hui {Zhang}, Qiugang {Zong}, Hyunju {Connor}, Peter {Delamere}, G{\'a}bor
+ % {Facsk{\'o}}, Desheng {Han}, Hiroshi {Hasegawa}, Esa {Kallio}, {\'A}rp{\'a}d
+  %{Kis}, Guan {Le}, Bertrand {Lemb{\`e}ge}, Yu~{Lin}, Terry {Liu}, Kjellmar
+  %{Oksavik}, Nojan {Omidi}, Antonius {Otto}, Jie {Ren}, Quanqi {Shi}, David
+  %{Sibeck}, and Shutao {Yao}.
+%\newblock {Dayside Transient Phenomena and Their Impact on the Magnetosphere
+  %and Ionosphere}.
+%\newblock \emph{Space Science Reviews}, 218\penalty0 (5):\penalty0 40, August
+ % 2022.
+%\newblock \doi{10.1007/s11214-021-00865-0}.
+
+%\end{thebibliography}
+
+\listoffigures
+\addcontentsline{toc}{chapter}{Ábrák jegyzéke}
+\listoftables
+\addcontentsline{toc}{chapter}{Táblázatok jegyzéke}
+\end{document}
